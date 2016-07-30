@@ -141,7 +141,7 @@ namespace AutoStream
             }
             foreach (string filename in dict)
             {
-                temp = "http://extremecloud.dscloud.biz/AutoStream/dict/" + filename;
+                temp = "http://url/AutoStream/dict/" + filename;
                 Uri url = new Uri(temp);
                 try
                 {
@@ -153,7 +153,7 @@ namespace AutoStream
                     // Console.WriteLine(ex.StackTrace);
                 }
             }
-            temp = "http://extremecloud.dscloud.biz/AutoStream/resources/reference.bmp";
+            temp = "http://url/AutoStream/resources/reference.bmp";
             Uri url2 = new Uri(temp);
             try
             {
@@ -420,8 +420,8 @@ namespace AutoStream
         {
             try
             {
-                FtpWebRequest ftpClient = (FtpWebRequest)FtpWebRequest.Create(new Uri("ftp://extremecloud.dscloud.biz/web/AutoStream/dict/todo.csv"));
-                ftpClient.Credentials = new System.Net.NetworkCredential("AutoStream", "KRsoloQ_007");
+                FtpWebRequest ftpClient = (FtpWebRequest)FtpWebRequest.Create(new Uri("ftp://url/web/AutoStream/dict/todo.csv"));
+                ftpClient.Credentials = new System.Net.NetworkCredential("user", "password");
                 ftpClient.Method = System.Net.WebRequestMethods.Ftp.UploadFile;
                 ftpClient.UseBinary = true;
                 ftpClient.KeepAlive = true;
@@ -822,7 +822,7 @@ namespace AutoStream
         
         private void suchenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("http://extremecloud.dscloud.biz/AutoStream/documentation.html");
+            Process.Start("http://url/AutoStream/documentation.html");
         }
         
         #endregion
